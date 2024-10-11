@@ -11,7 +11,7 @@ public class MyMapper extends Mapper<Object, Text, Text, Text> {
         String[] fieldStrings = value.toString().split(",");
 
         // 检查字段数量是否足够
-        if (fieldStrings.length >= 17) {
+        if (fieldStrings.length >= 15) {
             Double[] fields = new Double[fieldStrings.length];
 
             try {
