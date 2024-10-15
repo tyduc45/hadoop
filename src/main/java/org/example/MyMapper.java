@@ -43,7 +43,7 @@ public class MyMapper extends Mapper<Object, Text, Text, Text> {
         Double[] brake = {brake_output_l1, brake_output_l2, brake_output_r1, brake_output_r2};
 
         // 第一组：Func1 -> (timestamp, velocity, brake[2])
-        context.write(new Text("Func1"), new Text("TimeStamp: " + timestamp + ", Velocity: " + velocity + ", BrakeOutput: " + brake));
+        context.write(new Text("Func1"), new Text("TimeStamp: " + timestamp + ", Velocity: " + velocity + ", BrakeOutput_l1: " + brake_output_l1 + ", BrakeOutput_l2:" + brake_output_l2 + ", BrakeOutput_r1:" + brake_output_r1 + ", BrakeOutput_r2" + brake_output_r2));
 
         // 第二组：Func 2 -> (timestamp, accx, engRPM, velocity)
         context.write(new Text("Func2"), new Text("TimeStamp: " + timestamp + " Accx: " + accx + "EngRPM: " + engRPM +  "Velocity" + velocity));
